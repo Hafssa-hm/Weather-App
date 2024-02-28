@@ -1,0 +1,133 @@
+.forecast-div {
+    min-height: 600px;
+    margin: 30px auto;
+    max-width: 700px;
+    animation: slide-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: rotateY(20deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.accordion-item {
+    cursor: pointer;
+}
+
+.hourly-item {
+    background-color: var(--item-bg);
+    border-radius: 15px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 20px;
+
+}
+
+.icon-small {
+    width: 40px;
+    cursor: pointer;
+}
+
+.time {
+    color: #212121;
+    flex: 1 1;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+label.description {
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+.min-max {
+    color: #757575;
+}
+
+.hourly-detail-grid {
+    grid-row-gap: 0;
+    background-color: var(--item-lighter-bg);
+    border-radius: 15px;
+    margin: 5px;
+    -webkit-tap-highlight-color: transparent;
+    grid-column-gap: 15px;
+    column-gap: 15px;
+    row-gap: 0;
+    display: grid;
+    flex: 1 1;
+    grid-template-columns: auto auto;
+    padding: 5px 15px;
+    animation: slide-in .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        height: 0;
+        transform: rotateY(60deg);
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 100px;
+        transform: rotateY(0deg);
+    }
+}
+
+.hourly-detail-grid-item {
+    align-items: center;
+    display: flex;
+    -webkit-tap-highlight-color: transparent;
+    height: 30px;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.hourly-detail-grid-item :first-child {
+    color: #494848;
+}
+
+.hourly-detail-grid-item :last-child {
+    color: #212121;
+}
+
+@media screen and (max-width: 400px) {
+
+    .time,
+    label.description {
+        font-size: 12px;
+    }
+
+    .hourly-detail-grid-item {
+        font-size: 14px;
+    }
+
+}
