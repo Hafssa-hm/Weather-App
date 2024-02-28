@@ -55,7 +55,7 @@ const Forecast: React.FC = () => {
                                     <AccordionItemButton>
                                         <div className="hourly-item">
                                             <img
-                                                src={`/public/icons/${item.weather[0].icon}.png`}
+                                                src={`/icons/${item.weather[0].icon}.png`}
                                                 alt="weather"
                                                 className="icon-small"
                                                 draggable="false"
